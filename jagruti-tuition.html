@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jagruti Group Tuition | Admissions Open 2026-27</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A73E8;
+    --blue-dark: #1557B0;
+    --blue-light: #E8F0FE;
+    --yellow: #FFB800;
+    --yellow-light: #FFF3CC;
+    --green: #34A853;
+    --green-light: #E6F4EA;
+    --orange: #FF6D00;
+    --pink: #E91E8C;
+    --white: #FFFFFF;
+    --text: #1A1A2E;
+    --text-soft: #5F6368;
+    --bg: #F8FAFF;
+    --card-bg: #FFFFFF;
+    --radius: 20px;
+    --shadow: 0 4px 24px rgba(26,115,232,0.10);
+    --shadow-hover: 0 8px 40px rgba(26,115,232,0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 20px rgba(26,115,232,0.08);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .nav-logo-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+
+  .nav-logo-text {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--blue-dark);
+    line-height: 1.1;
+  }
+
+  .nav-logo-text span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .nav-badge {
+    background: linear-gradient(135deg, var(--yellow), #FFA000);
+    color: #5a3a00;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    animation: pulse-badge 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,184,0,0.5); }
+    50% { box-shadow: 0 0 0 8px rgba(255,184,0,0); }
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    padding: 7rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(160deg, #EBF3FF 0%, #F8FAFF 50%, #FFF9EC 100%);
+  }
+
+  /* Decorative blobs */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .blob-1 { width: 400px; height: 400px; background: #B3D4FF; top: -100px; left: -100px; }
+  .blob-2 { width: 300px; height: 300px; background: #FFE082; bottom: -50px; right: -50px; }
+  .blob-3 { width: 200px; height: 200px; background: #A5D6A7; top: 40%; right: 10%; }
+
+  /* Floating shapes */
+  .float-shape {
+    position: absolute;
+    pointer-events: none;
+    animation: floatAnim var(--dur, 6s) ease-in-out infinite var(--delay, 0s);
+    opacity: 0.15;
+    font-size: var(--size, 2rem);
+  }
+
+  @keyframes floatAnim {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-left {}
+
+  .admission-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.03em;
+    border: 1.5px solid rgba(52,168,83,0.3);
+  }
+
+  .admission-pill .dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: blink 1.2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-title .highlight {
+    color: var(--blue);
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-title .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; left: 0; right: 0;
+    height: 6px;
+    background: var(--yellow);
+    border-radius: 4px;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(26,115,232,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(26,115,232,0.45);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: var(--blue);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    border: 2px solid var(--blue-light);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--blue);
+  }
+
+  /* Hero right — illustration card */
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-card {
+    background: white;
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-hover);
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+    animation: floatCard 5s ease-in-out infinite;
+  }
+
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .hero-card-badge {
+    position: absolute;
+    top: -14px; right: 24px;
+    background: var(--yellow);
+    color: #5a3a00;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-card-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+
+  .hero-card-sub {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .boards-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .board-chip {
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+  }
+
+  .standards-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-soft);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+
+  .standards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .std-box {
+    background: linear-gradient(135deg, var(--blue), #4A90E2);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .std-box:hover { transform: scale(1.1); }
+
+  .std-box.green { background: linear-gradient(135deg, var(--green), #43C059); }
+  .std-box.orange { background: linear-gradient(135deg, var(--orange), #FF8F00); }
+  .std-box.pink { background: linear-gradient(135deg, var(--pink), #C2185B); }
+
+  /* ===== STATS BANNER ===== */
+  .stats-banner {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .stats-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stat-item {
+    text-align: center;
+    color: white;
+  }
+
+  .stat-num {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--yellow);
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-top: 0.3rem;
+  }
+
+  /* ===== WHY CHOOSE ===== */
+  .why-section {
+    padding: 5rem 2rem;
+    background: var(--bg);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title span { color: var(--blue); }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+
+  .features-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--blue-light);
+  }
+
+  .feature-icon-wrap {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .feature-icon-wrap.blue { background: var(--blue-light); }
+  .feature-icon-wrap.yellow { background: var(--yellow-light); }
+  .feature-icon-wrap.green { background: var(--green-light); }
+  .feature-icon-wrap.orange { background: #FFF3E0; }
+  .feature-icon-wrap.pink { background: #FCE4EC; }
+  .feature-icon-wrap.purple { background: #F3E5F5; }
+
+  .feature-body {}
+
+  .feature-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .feature-desc {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+  }
+
+  /* ===== FUN SECTION ===== */
+  .fun-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(160deg, #FFF9EC, #FFF3FF);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fun-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .fun-activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .fun-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+    border-bottom: 4px solid transparent;
+  }
+
+  .fun-card:hover { transform: translateY(-5px); }
+
+  .fun-card:nth-child(1) { border-color: var(--blue); }
+  .fun-card:nth-child(2) { border-color: var(--yellow); }
+  .fun-card:nth-child(3) { border-color: var(--green); }
+  .fun-card:nth-child(4) { border-color: var(--pink); }
+  .fun-card:nth-child(5) { border-color: var(--orange); }
+  .fun-card:nth-child(6) { border-color: #9C27B0; }
+
+  .fun-emoji {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .fun-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* ===== BOARDS SECTION ===== */
+  .boards-section {
+    padding: 5rem 2rem;
+    background: white;
+  }
+
+  .boards-big-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .board-card {
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .board-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .board-card.state { background: #E8F0FE; }
+  .board-card.cbse { background: #E6F4EA; }
+  .board-card.icse { background: #FFF3E0; }
+  .board-card.igcse { background: #FCE4EC; }
+
+  .board-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .board-name {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .board-desc {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    font-weight: 600;
+    margin-top: 0.2rem;
+  }
+
+  /* Std range */
+  .std-range-banner {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    background: linear-gradient(135deg, var(--blue-light), #E8F5E9);
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .std-range-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-soft);
+    flex-shrink: 0;
+  }
+
+  .std-chips {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .std-chip {
+    background: white;
+    border-radius: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--blue-dark);
+    box-shadow: 0 2px 8px rgba(26,115,232,0.15);
+  }
+
+  /* ===== TEACHER SECTION ===== */
+  .teacher-section {
+    padding: 5rem 2rem;
+    background: var(--bg);
+  }
+
+  .teacher-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 28px;
+    padding: 3rem;
+    box-shadow: var(--shadow-hover);
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 6px solid var(--blue);
+  }
+
+  .teacher-avatar {
+    width: 110px; height: 110px;
+    background: linear-gradient(135deg, var(--blue-light), #C5E1FF);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    flex-shrink: 0;
+    border: 4px solid white;
+    box-shadow: 0 4px 20px rgba(26,115,232,0.2);
+  }
+
+  .teacher-info {}
+
+  .teacher-name {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+  }
+
+  .teacher-creds {
+    font-size: 0.9rem;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  .teacher-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .teacher-tag {
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+  }
+
+  .teacher-tag.yellow { background: var(--yellow-light); color: #7a5000; }
+  .teacher-tag.green { background: var(--green-light); color: #1b5e20; }
+
+  /* ===== CONTACT SECTION ===== */
+  .contact-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, #1A237E 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255,184,0,0.15), transparent 60%);
+  }
+
+  .contact-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-sub {
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .contact-card:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-3px);
+  }
+
+  .contact-card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .contact-card-label {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-card-value {
+    font-size: 0.95rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--yellow);
+    color: #3a2a00;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(255,184,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba(255,184,0,0.55);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0D1117;
+    padding: 2rem;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+  }
+
+  footer strong { color: rgba(255,255,255,0.7); }
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .fun-inner { grid-template-columns: 1fr; }
+    .boards-big-grid { grid-template-columns: 1fr; }
+    .teacher-card { flex-direction: column; text-align: center; }
+    .teacher-tags { justify-content: center; }
+    .hero-cta-row { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">📚</div>
+    <div class="nav-logo-text">
+      Jagruti Group Tuition
+      <span>Home Tuition Classes</span>
+    </div>
+  </div>
+  <div class="nav-badge">🎉 Admissions Open 2026–27</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Floating emojis -->
+  <div class="float-shape" style="top:15%;left:5%;--dur:7s;--delay:0s;--size:2.5rem;">🎓</div>
+  <div class="float-shape" style="top:60%;left:8%;--dur:5s;--delay:1s;--size:2rem;">✏️</div>
+  <div class="float-shape" style="top:20%;right:5%;--dur:6s;--delay:0.5s;--size:2rem;">🌟</div>
+  <div class="float-shape" style="top:70%;right:8%;--dur:8s;--delay:2s;--size:2.5rem;">📖</div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="admission-pill">
+        <div class="dot"></div>
+        Admissions Now Open for 2026–27
+      </div>
+
+      <h1 class="hero-title">
+        Where Every Child<br>
+        <span class="highlight">Learns, Grows</span><br>
+        & Shines ✨
+      </h1>
+
+      <p class="hero-sub">
+        At <strong>Jagruti Group Tuition</strong>, we bring 20+ years of passionate teaching experience right to your neighbourhood — nurturing young minds with individual attention, joyful learning, and a strong foundation for success.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn-primary">
+          📞 Enquire Now
+        </a>
+        <a href="#features" class="btn-secondary">
+          ✨ Why Choose Us
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-badge">New Batch 2026–27</div>
+        <div class="hero-card-title">Jagruti Group Tuition</div>
+        <div class="hero-card-sub">All Subjects · Std 1 to 8</div>
+
+        <div class="boards-row">
+          <span class="board-chip">STATE BOARD</span>
+          <span class="board-chip">CBSE</span>
+          <span class="board-chip">ICSE</span>
+          <span class="board-chip">IGCSE</span>
+        </div>
+
+        <p class="standards-label">Accepting Students From</p>
+        <div class="standards-grid">
+          <div class="std-box">1st</div>
+          <div class="std-box">2nd</div>
+          <div class="std-box green">3rd</div>
+          <div class="std-box green">4th</div>
+          <div class="std-box orange">5th</div>
+          <div class="std-box orange">6th</div>
+          <div class="std-box pink">7th</div>
+          <div class="std-box pink">8th</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BANNER -->
+<div class="stats-banner">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Years of Teaching Experience</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-num">1–8</div>
+      <div class="stat-label">Standards Covered</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Boards: State, CBSE, ICSE, IGCSE</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-num">All</div>
+      <div class="stat-label">Subjects Covered</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section" id="features">
+  <div class="section-header">
+    <span class="section-tag reveal">Why Choose Us</span>
+    <h2 class="section-title reveal reveal-delay-1">Teaching That Makes a <span>Real Difference</span></h2>
+    <p class="section-desc reveal reveal-delay-2">We go beyond textbooks — building confidence, curiosity, and a love for learning in every child.</p>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-icon-wrap blue">🏆</div>
+      <div class="feature-body">
+        <div class="feature-title">20+ Years of Experience</div>
+        <div class="feature-desc">Backed by over two decades of dedicated teaching, our methods are time-tested and trusted by hundreds of families.</div>
+      </div>
+    </div>
+    <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-icon-wrap yellow">📚</div>
+      <div class="feature-body">
+        <div class="feature-title">All Subjects Covered</div>
+        <div class="feature-desc">From Maths and Science to Languages and Social Studies — we cover every subject so your child never feels left behind.</div>
+      </div>
+    </div>
+    <div class="feature-card reveal reveal-delay-3">
+      <div class="feature-icon-wrap green">✅</div>
+      <div class="feature-body">
+        <div class="feature-title">Daily Practice</div>
+        <div class="feature-desc">Consistent daily exercises and worksheets reinforce concepts and build strong problem-solving habits in students.</div>
+      </div>
+    </div>
+    <div class="feature-card reveal reveal-delay-4">
+      <div class="feature-icon-wrap orange">🎯</div>
+      <div class="feature-body">
+        <div class="feature-title">Individual Attention</div>
+        <div class="feature-desc">Every child is unique. We take the time to understand each student's learning style and pace to help them thrive.</div>
+      </div>
+    </div>
+    <div class="feature-card reveal reveal-delay-5">
+      <div class="feature-icon-wrap pink">📝</div>
+      <div class="feature-body">
+        <div class="feature-title">Special Exam Preparation</div>
+        <div class="feature-desc">Targeted revision sessions, mock tests, and paper-solving strategies to ensure every child walks into exams with full confidence.</div>
+      </div>
+    </div>
+    <div class="feature-card reveal reveal-delay-6">
+      <div class="feature-icon-wrap purple">👶</div>
+      <div class="feature-body">
+        <div class="feature-title">Limited Students</div>
+        <div class="feature-desc">We keep our batches small on purpose — so every student gets the personal care and focus they truly deserve.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUN ACTIVITIES -->
+<section class="fun-section">
+  <div class="fun-inner">
+    <div class="section-header" style="text-align:left;max-width:100%;margin:0;">
+      <span class="section-tag reveal">Beyond Academics</span>
+      <h2 class="section-title reveal reveal-delay-1">Learning is<br><span>Fun Here!</span> 🎉</h2>
+      <p class="section-desc reveal reveal-delay-2" style="margin-bottom:1.5rem;">
+        We believe happy children learn better! Alongside academics, we nurture creativity, teamwork, and joy through engaging fun activities that make every child excited to come back.
+      </p>
+      <div class="reveal reveal-delay-3">
+        <span style="font-size:0.85rem;font-weight:700;color:var(--text-soft);">
+          🌈 Our promise: Every child leaves with a smile and something new learned!
+        </span>
+      </div>
+    </div>
+
+    <div class="fun-activities reveal reveal-delay-2">
+      <div class="fun-card">
+        <span class="fun-emoji">🎨</span>
+        <div class="fun-label">Creative Arts</div>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">🎲</span>
+        <div class="fun-label">Brain Games</div>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">🧩</span>
+        <div class="fun-label">Puzzle Solving</div>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">📖</span>
+        <div class="fun-label">Story Time</div>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">🎤</span>
+        <div class="fun-label">Speaking Skills</div>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">🏅</span>
+        <div class="fun-label">Quiz Competitions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOARDS & STANDARDS -->
+<section class="boards-section" id="boards">
+  <div class="section-header">
+    <span class="section-tag reveal">We Cover All Boards</span>
+    <h2 class="section-title reveal reveal-delay-1">Admissions Open for <span>All Boards</span></h2>
+    <p class="section-desc reveal reveal-delay-2">No matter which board your child studies under, we have the expertise to guide them to excellence.</p>
+  </div>
+
+  <div class="boards-big-grid">
+    <div class="board-card state reveal reveal-delay-1">
+      <div class="board-icon">🏛️</div>
+      <div>
+        <div class="board-name">State Board</div>
+        <div class="board-desc">Maharashtra State Curriculum</div>
+      </div>
+    </div>
+    <div class="board-card cbse reveal reveal-delay-2">
+      <div class="board-icon">🇮🇳</div>
+      <div>
+        <div class="board-name">CBSE</div>
+        <div class="board-desc">Central Board of Secondary Education</div>
+      </div>
+    </div>
+    <div class="board-card icse reveal reveal-delay-3">
+      <div class="board-icon">📜</div>
+      <div>
+        <div class="board-name">ICSE</div>
+        <div class="board-desc">Indian Certificate of Secondary Education</div>
+      </div>
+    </div>
+    <div class="board-card igcse reveal reveal-delay-4">
+      <div class="board-icon">🌍</div>
+      <div>
+        <div class="board-name">IGCSE</div>
+        <div class="board-desc">Cambridge International Curriculum</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="std-range-banner reveal">
+    <div class="std-range-label">📌 Accepting admissions for Standards:</div>
+    <div class="std-chips">
+      <div class="std-chip">1st</div>
+      <div class="std-chip">2nd</div>
+      <div class="std-chip">3rd</div>
+      <div class="std-chip">4th</div>
+      <div class="std-chip">5th</div>
+      <div class="std-chip">6th</div>
+      <div class="std-chip">7th</div>
+      <div class="std-chip">8th</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHER -->
+<section class="teacher-section">
+  <div class="section-header">
+    <span class="section-tag reveal">Meet Your Teacher</span>
+    <h2 class="section-title reveal reveal-delay-1">Experienced, Caring & <span>Dedicated</span></h2>
+  </div>
+
+  <div class="teacher-card reveal reveal-delay-2">
+    <div class="teacher-avatar">👩‍🏫</div>
+    <div class="teacher-info">
+      <div class="teacher-name">Jagruti Rajpopat</div>
+      <div class="teacher-creds">B.Com · B.Ed · Mumbai</div>
+      <div class="teacher-tags">
+        <span class="teacher-tag">🏆 20+ Years Experience</span>
+        <span class="teacher-tag yellow">📚 All Subjects</span>
+        <span class="teacher-tag green">🎯 Individual Attention</span>
+        <span class="teacher-tag">🏠 Home Tuition</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <h2 class="contact-title reveal">Ready to Enrol Your Child? 🌟</h2>
+    <p class="contact-sub reveal reveal-delay-1">Seats are limited — secure your child's spot in the new 2026–27 batch today!</p>
+
+    <div class="contact-cards">
+      <div class="contact-card reveal reveal-delay-1">
+        <span class="contact-card-icon">📞</span>
+        <div class="contact-card-label">Call / WhatsApp</div>
+        <div class="contact-card-value">8850594482</div>
+      </div>
+      <div class="contact-card reveal reveal-delay-2">
+        <span class="contact-card-icon">👩‍🏫</span>
+        <div class="contact-card-label">Teacher</div>
+        <div class="contact-card-value">Jagruti Rajpopat<br>B.Com, B.Ed</div>
+      </div>
+      <div class="contact-card reveal reveal-delay-3">
+        <span class="contact-card-icon">📍</span>
+        <div class="contact-card-label">Address</div>
+        <div class="contact-card-value">Kunal Char Rasta,<br>Gotri, Vadodara</div>
+      </div>
+    </div>
+
+    <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.5rem;" class="reveal reveal-delay-3">
+      For more details, please visit us at the given address or call/WhatsApp us directly.
+    </p>
+
+    <a href="tel:8850594482" class="call-btn reveal reveal-delay-4">
+      📞 Call Now: 8850594482
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Jagruti Group Tuition</strong> · Kunal Char Rasta, Gotri, Vadodara · 📞 8850594482<br>
+  <span style="margin-top:0.5rem;display:block;">© 2026 Jagruti Rajpopat B.Com, B.Ed · All Rights Reserved</span>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
